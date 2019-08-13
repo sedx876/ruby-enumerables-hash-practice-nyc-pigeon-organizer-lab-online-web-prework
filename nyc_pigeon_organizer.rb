@@ -1,49 +1,12 @@
-#def nyc_pigeon_organizer(data)
-pigeon_list = {
-  "Theo" => {
-    :color => ["purple", "grey"],
-    :gender => ["male"],
-    :lives => ["Subway"]
-  },
-  "Peter Jr." => {
-    :color => ["purple", "grey"],
-    :gender => ["male"],
-    :lives => ["Library"]
-  },
-  "Lucky" => {
-    :color => ["purple"],
-    :gender => ["male"],
-    :lives => ["Central Park"]
-  },
-  "Ms. K" => {
-    :color => ["grey", "white"],
-    :gender => ["female"],
-    :lives => ["Central Park"]
-  },
-  "Queenie" => {
-    :color => ["white", "brown"],
-    :gender => ["female"],
-    :lives => ["Subway"]
-  },
-  "Andrew" => {
-    :color => ["white"],
-    :gender => ["male"],
-    :lives => ["City Hall"]
-  },
-  "Alex" => {
-    :color => ["white", "brown"],
-    :gender => ["male"],
-    :lives => ["Central Park"]
-  },
-  "Luca" => {
-    :color => ["brown"],
-    :gender => ["male"],
-    :lives => ["Library"]
-  },
-  "Lola" => {
-    :color => ["black"],
-    :gender => ["female"],
-    :lives => ["Central Park"]
-  }
-}
-#end
+def nyc_pigeon_organizer(data)
+pigeon_data.each do |attribute, attribute_data|
+    attribute_data.each do |option, pigeon_array|
+      pigeon_array.each do |pigeon|
+        if pigeon_names.include?(pigeon) == false
+          pigeon_names << pigeon
+          pigeon_list[pigeon] = {:color => [], :gender => [], :lives => []}
+        end
+      end
+    end
+  end
+end
