@@ -1,4 +1,4 @@
-def nyc_pigeon_organizer(data)
+#def nyc_pigeon_organizer(data)
 pigeon_list = {
   "Theo" => {
     :color => ["purple", "grey"],
@@ -36,4 +36,4 @@ pigeon_list = {
     :lives => ["Central Park"]
   }
 }
-end
+#end
